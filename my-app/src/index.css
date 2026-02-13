@@ -8,8 +8,6 @@ body {
   background-color: #fffefe;
   color: rgba(0, 0, 0, 0.87);
   min-height: 100vh;
-  display: flex;
-  place-items: center;
 }
 
 /* Links */
