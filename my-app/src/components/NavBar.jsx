@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { id: 'deleteBooking', label: 'Delete Booking', icon: '✕' },
 ];
 
-export default function NavBar({ currentView, setCurrentView }) {
+const NavBar = ({ currentView, setCurrentView }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -31,3 +31,5 @@ export default function NavBar({ currentView, setCurrentView }) {
     </nav>
   );
 }
+
+export default NavBar
