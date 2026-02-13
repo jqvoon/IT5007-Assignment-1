@@ -1,3 +1,4 @@
+import AvailableTickets from './AvailableTickets';
 import './NavBar.css';
 
 const NAV_ITEMS = [
@@ -14,7 +15,7 @@ const NavBar = ({ currentView, setCurrentView }) => {
         <span className="navbar-logo-title">Concert Desk</span>
         <span className="navbar-logo-subtitle">Limited Seat Reservation System</span>
       </div>
-
+      <AvailableTickets/>
       <ul className="navbar-links">
         {NAV_ITEMS.map(({ id, label, icon }) => (
           <li key={id}>
