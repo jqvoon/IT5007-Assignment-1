@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NavBar from './components/NavBar';
+import SeatMap from './components/SeatMap';
 import './App.css'
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
   return (
     <>
     <NavBar currentView={currentView} setCurrentView={setCurrentView}/>
+    {currentView === "seatMap" && <SeatMap/>}
     {/* navbar + available Tickets
     SeatMap
     Attendees
