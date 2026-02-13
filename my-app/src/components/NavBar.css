@@ -118,3 +118,19 @@
 .navbar-btn.active .navbar-btn-icon {
   opacity: 1;
 }
+
+/* ── Ticker counter ────────────────────────────────────────────────── */
+.available-tickets {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.tickets-remaining {
+  font-weight: 600;
+  color: #b8860b;
+}
+
+.tickets-label {
+    color: #222;
+}
