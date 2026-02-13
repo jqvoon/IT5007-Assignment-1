@@ -1,0 +1,120 @@
+/* NavBar.css */
+
+/* ── Layout ─────────────────────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 2rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 64px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Logo ────────────────────────────────────────────────── */
+.navbar-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  user-select: none;
+}
+
+.navbar-logo-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  color: #b8860b;
+  line-height: 1;
+}
+
+.navbar-logo-subtitle {
+  /* reuses main.css font-weight: 400 base, overrides to light */
+  font-weight: 300;
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #999;
+}
+
+/* ── Nav links list ──────────────────────────────────────── */
+.navbar-links {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Nav buttons — extends main.css button base ──────────── */
+.navbar-btn {
+  /* main.css gives us: border-radius, border, font-size,
+     font-weight: 500, font-family: inherit, cursor, transition  */
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  height: 100%;
+  padding: 0 1.25rem;
+
+  /* override main.css button defaults for navbar context */
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  color: #888;
+
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  /* inherits transition from main.css */
+  transition: color 0.2s ease, border-color 0.25s;
+}
+
+/* Active indicator line */
+.navbar-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #b8860b;
+  transition: width 0.25s ease;
+}
+
+/* Hover — neutralise main.css button:hover border-color flash */
+.navbar-btn:hover {
+  border-color: transparent;
+  color: #222;
+}
+
+.navbar-btn:hover::after {
+  width: 60%;
+}
+
+/* Active view */
+.navbar-btn.active {
+  color: #b8860b;
+}
+
+.navbar-btn.active::after {
+  width: 60%;
+}
+
+/* ── Icon ────────────────────────────────────────────────── */
+.navbar-btn-icon {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.navbar-btn:hover .navbar-btn-icon,
+.navbar-btn.active .navbar-btn-icon {
+  opacity: 1;
+}

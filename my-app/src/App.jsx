@@ -1,9 +1,10 @@
 import { useState } from 'react'
+import NavBar from './components/NavBar';
 import './App.css'
 
 const App = () => {
   const totalSeats = parseInt(import.meta.env.VITE_REACT_MAX_SEATS) || 10;
-  const defaultview = import.meta.env.VITE_REACT_DEFAULT_VIEW || 'SeatMap';
+  const defaultview = import.meta.env.VITE_REACT_DEFAULT_VIEW || 'seatMap';
   const [currentView, setCurrentView] = useState(defaultview)
   const reservationTemplate = {
       reservationId: "",
@@ -27,6 +28,7 @@ const App = () => {
   
   return (
     <>
+    <NavBar currentView={currentView} setCurrentView={setCurrentView}/>
     {/* navbar + available Tickets
     SeatMap
     Attendees
