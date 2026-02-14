@@ -6,9 +6,6 @@ export const reservationTemplate = {
     reservationId: "",
     fullName: "",
     phoneNumber: "",
-    seats: []
-}
-export const reservedSeatTemplate = {
     seatNumber: "",
     category: "",
     reservationTimestamp: ""
