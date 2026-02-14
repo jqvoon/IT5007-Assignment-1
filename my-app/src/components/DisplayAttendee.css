@@ -1,0 +1,122 @@
+/* Attendees.css */
+
+/* ── Wrapper ─────────────────────────────────────────────── */
+.attendees-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Empty state ─────────────────────────────────────────── */
+.attendees-empty {
+  padding: 3rem;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.95rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 1px dashed #ddd;
+}
+
+/* ── Table container ─────────────────────────────────────── */
+.attendees-table-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* ── Table ───────────────────────────────────────────────── */
+.attendees-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.attendees-table thead tr {
+  background: #1a1a2e;
+}
+
+.attendees-table th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: #c9a84c;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* ── Rows ────────────────────────────────────────────────── */
+.attendees-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.15s ease;
+}
+
+.attendees-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.attendees-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* ── Cells ───────────────────────────────────────────────── */
+.attendees-table td {
+  padding: 0.75rem 1rem;
+  color: #333;
+  vertical-align: middle;
+}
+
+
+
+/* ── Name ────────────────────────────────────────────────── */
+.td-name {
+  font-weight: 500;
+  color: #222;
+}
+
+/* ── Seat badge ──────────────────────────────────────────── */
+.seat-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #f0f0f0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* ── Category pill ───────────────────────────────────────── */
+.category-pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.category-pill--gold {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #92600a;
+  border: 1px solid #f5d060;
+}
+
+.category-pill--silver {
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+/* ── Timestamp ───────────────────────────────────────────── */
+.td-timestamp {
+  color: #888;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
