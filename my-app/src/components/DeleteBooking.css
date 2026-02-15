@@ -1,0 +1,281 @@
+/* DeleteBooking.css */
+
+/* ── Wrapper ─────────────────────────────────────────────── */
+.delete-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem 1rem;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.delete-card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: 2rem 2rem 2.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.delete-header {
+  margin-bottom: 1.25rem;
+}
+
+.delete-title {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: #c0392b;
+  margin: 0 0 0.3rem 0;
+  line-height: 1;
+}
+
+.delete-note {
+  font-size: 0.82rem;
+  color: #aaa;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Status ──────────────────────────────────────────────── */
+.delete-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+}
+
+.delete-status--success {
+  background: #f0faf4;
+  border: 1px solid #a8dfc0;
+  color: #1e6e45;
+}
+
+.delete-status--error {
+  background: #fff5f5;
+  border: 1px solid #fbb;
+  color: #c0392b;
+}
+
+.status-icon {
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Lookup form ─────────────────────────────────────────── */
+.delete-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #222;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  outline: none;
+  cursor: text;
+}
+
+.form-input:focus {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192,57,43,0.1);
+  background: #fff;
+}
+
+.form-input::placeholder {
+  color: #bbb;
+}
+
+/* ── Lookup button ───────────────────────────────────────── */
+.delete-lookup-btn {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.25rem;
+  background: #1a1a2e;
+  color: #c9a84c;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.delete-lookup-btn:hover {
+  background: #2c2c4a;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+.delete-lookup-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Confirm section ─────────────────────────────────────── */
+.delete-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.confirm-heading {
+  font-size: 0.88rem;
+  color: #555;
+  margin: 0;
+}
+
+/* ── Confirm details card ────────────────────────────────── */
+.confirm-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.confirm-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.confirm-row:last-child {
+  border-bottom: none;
+}
+
+.confirm-key {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #aaa;
+}
+
+.confirm-val {
+  font-size: 0.88rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.confirm-id {
+  font-size: 0.82rem;
+  color: #888;
+  background: #f4f4f4;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.confirm-seat-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #f0f0f0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.confirm-ts {
+  font-size: 0.82rem;
+  color: #888;
+}
+
+/* ── Category pills ──────────────────────────────────────── */
+.category-pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.category-pill--gold {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #92600a;
+  border: 1px solid #f5d060;
+}
+
+.category-pill--silver {
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+/* ── Confirm action buttons ──────────────────────────────── */
+.confirm-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.confirm-cancel-btn {
+  flex: 1;
+  padding: 0.75rem;
+  background: #f5f5f5;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.confirm-cancel-btn:hover {
+  background: #eee;
+  border-color: #ccc;
+}
+
+.confirm-delete-btn {
+  flex: 2;
+  padding: 0.75rem;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.confirm-delete-btn:hover {
+  background: #a93226;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+.confirm-delete-btn:active {
+  transform: translateY(0);
+}
