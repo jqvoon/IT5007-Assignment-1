@@ -1,0 +1,255 @@
+/* AddBooking.css */
+
+/* ── Wrapper ─────────────────────────────────────────────── */
+.bookseat-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem 1rem;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.bookseat-card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: 2rem 2rem 2.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.bookseat-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.bookseat-title {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: #b8860b;
+  margin: 0;
+  line-height: 1;
+}
+
+.bookseat-availability {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-open  { background: #2ecc71; box-shadow: 0 0 0 3px rgba(46,204,113,0.2); }
+.dot-full  { background: #e74c3c; box-shadow: 0 0 0 3px rgba(231,76,60,0.2); }
+
+/* ── Note ────────────────────────────────────────────────── */
+.bookseat-note {
+  font-size: 0.82rem;
+  color: #aaa;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+}
+
+/* ── Status messages ─────────────────────────────────────── */
+.bookseat-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.bookseat-status--success {
+  background: #f0faf4;
+  border: 1px solid #a8dfc0;
+  color: #1e6e45;
+}
+
+.bookseat-status--error {
+  background: #fff5f5;
+  border: 1px solid #fbb;
+  color: #c0392b;
+}
+
+.status-icon {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.status-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.status-id {
+  font-size: 0.78rem;
+  opacity: 0.75;
+}
+
+/* ── Form ────────────────────────────────────────────────── */
+.bookseat-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Form group ──────────────────────────────────────────── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+/* ── Input — extends main.css button base ────────────────── */
+.form-input {
+  /* override main.css button styles */
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 0.92rem;
+  color: #222;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  outline: none;
+
+  /* reset main.css button background */
+  background-color: #fafafa;
+  font-weight: 400;
+  cursor: text;
+}
+
+.form-input:focus {
+  border-color: #b8860b;
+  box-shadow: 0 0 0 3px rgba(184,134,11,0.12);
+  background: #fff;
+}
+
+.form-input::placeholder {
+  color: #bbb;
+}
+
+/* ── Category radio options ──────────────────────────────── */
+.category-options {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.category-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #eee;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.category-option input[type="radio"] {
+  display: none;
+}
+
+.category-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* Gold option */
+.category-option--gold {
+  background: #fffdf5;
+}
+
+.category-option--gold:hover {
+  border-color: #e8c84a;
+}
+
+.category-option--gold.selected {
+  border-color: #b8860b;
+  background: linear-gradient(135deg, #fef9e7, #fef3c7);
+  box-shadow: 0 2px 8px rgba(184,134,11,0.15);
+}
+
+.category-option--gold.selected .category-label {
+  color: #92600a;
+  font-weight: 600;
+}
+
+/* Silver option */
+.category-option--silver {
+  background: #fafafa;
+}
+
+.category-option--silver:hover {
+  border-color: #cbd5e1;
+}
+
+.category-option--silver.selected {
+  border-color: #8a9098;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  box-shadow: 0 2px 8px rgba(120,130,140,0.15);
+}
+
+.category-option--silver.selected .category-label {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* ── Submit button — extends main.css button ─────────────── */
+.bookseat-submit {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  background: #1a1a2e;
+  color: #c9a84c;
+  border: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.bookseat-submit:hover:not(:disabled) {
+  background: #2c2c4a;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+.bookseat-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.bookseat-submit:disabled {
+  background: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}

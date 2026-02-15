@@ -2,6 +2,7 @@ import { useState } from 'react'
 import NavBar from './components/NavBar';
 import SeatMap from './components/SeatMap';
 import DisplayAttendee from './components/DisplayAttendee';
+import AddBooking from './components/AddBooking';
 import './App.css'
 
 const App = () => {
@@ -13,11 +14,7 @@ const App = () => {
     <NavBar currentView={currentView} setCurrentView={setCurrentView}/>
     {currentView === "seatMap" && <SeatMap/>}
     {currentView === "attendees" && <DisplayAttendee/>}
-    {/* navbar + available Tickets
-    SeatMap
-    Attendees
-    Book Seat
-    Delete Booking */}
+    {currentView === "bookSeat" && <AddBooking/>}
     </>
   )
 }
