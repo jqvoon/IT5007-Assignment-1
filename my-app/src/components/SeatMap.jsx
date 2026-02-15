@@ -33,7 +33,7 @@ const SeatMap = () => {
                 <div
                   key={seat.seatNumber}
                   className={getSeatClass(seat)}
-                  title={
+                  data-tooltip={
                     seat.reservedBy
                       ? `Seat ${seat.seatNumber} — ${seat.category?.toUpperCase()} — ${seat.reservedBy}`
                       : `Seat ${seat.seatNumber} — Available`

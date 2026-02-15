@@ -133,6 +133,33 @@
   color: #888;
 }
 
+/* ── Tooltip ─────────────────────────────────────────────── */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 10;
+}
+
+[data-tooltip]:hover::before {
+  opacity: 1;
+}
+
 /* ── Legend — pinned to bottom of screen ─────────────────── */
 .seatmap-legend {
   position: fixed;
