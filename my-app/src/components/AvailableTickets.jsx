@@ -8,7 +8,7 @@ const AvailableTickets = () => {
     return (
         <div className="available-tickets">
             <span className="tickets-remaining">{numSeatsRemaining}</span>
-            <span className="tickets-label"> / {totalSeats} seats available</span>
+            <span className="tickets-label"> / {totalSeats} seat{totalSeats != 1 ? 's' : ''} available</span>
         </div>
     )
 }
